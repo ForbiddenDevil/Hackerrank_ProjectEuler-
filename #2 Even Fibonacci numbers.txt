@@ -1,0 +1,21 @@
+#!/bin/python3
+
+import sys
+
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    a = 0
+    b = 1
+    add = 0
+    nxt = 0
+    for i in range(n):
+        nxt = a + b
+        a = b
+        b = nxt
+        if nxt > n:
+            break
+        if (nxt % 2 == 0) & (nxt < n):
+            add += nxt
+    print(add)
