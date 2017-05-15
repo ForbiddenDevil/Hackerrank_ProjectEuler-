@@ -1,0 +1,7 @@
+n = int(input())
+ans = 0
+for i in range(n) :
+    ans += int(input())
+ans1 = str(ans)
+ans2 = ans1[0:10]
+print(int(ans2))
