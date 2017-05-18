@@ -1,0 +1,11 @@
+import math
+
+T = int(input())
+for i in range(T) :
+    num = math.factorial(int(input()))
+    ans = 0
+    while num != 0:
+        rem = num % 10
+        ans += rem
+        num = num // 10
+    print(ans)
