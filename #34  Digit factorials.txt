@@ -1,0 +1,16 @@
+import math
+
+n = int(input())
+
+def sumFact(n) :
+    ans = 0
+    while n != 0:
+        rem = n % 10
+        ans += math.factorial(rem)
+        n = n // 10
+    return ans
+ans1 = 0
+for i in range(10, n) :
+    if sumFact(i) % i == 0 :
+        ans1 += i
+print(ans1)
