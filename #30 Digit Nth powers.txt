@@ -1,0 +1,15 @@
+x = int(input())
+
+def nthPower(n) :
+    ans1 = 0
+    while n != 0 :
+        rem = n % 10
+        ans1 += rem ** x
+        n = n // 10
+    return ans1
+
+ans = 0
+for i in range(100, 600000) :
+    if nthPower(i) == i :
+        ans += i
+print(ans)
