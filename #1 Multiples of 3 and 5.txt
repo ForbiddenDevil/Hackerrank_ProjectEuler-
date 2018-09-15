@@ -1,0 +1,21 @@
+#!/bin/python3
+
+import sys
+
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    n1 = n//3
+    n2 = n//5
+    n3 = n//15
+    if n%3 == 0:
+        n1 -= 1
+    if n%5 == 0:
+        n2 -= 1
+    if n%15 == 0:
+        n3 -= 1
+    n1 = 3*n1*(n1+1)//2
+    n2 = 5*n2*(n2+1)//2
+    n3 = 15*n3*(n3+1)//2
+    print(n1+n2-n3)
